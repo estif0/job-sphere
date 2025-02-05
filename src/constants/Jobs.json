@@ -10,7 +10,7 @@
             "init": 70000,
             "final": 90000
         },
-        "description": "Develop and maintain web applications using React.",
+        "description": "Develop and maintain web applications using React. Collaborate with designers to create responsive and user-friendly interfaces. Optimize applications for maximum speed and scalability.",
         "isBookmarked": false
     },
     {
@@ -24,7 +24,7 @@
             "init": 80000,
             "final": 100000
         },
-        "description": "Build and maintain server-side logic using Node.js.",
+        "description": "Build and maintain server-side logic using Node.js. Develop and integrate APIs. Ensure high performance and responsiveness of applications.",
         "isBookmarked": true
     },
     {
@@ -38,7 +38,7 @@
             "init": 75000,
             "final": 95000
         },
-        "description": "Manage and optimize database systems.",
+        "description": "Manage and optimize database systems. Ensure data integrity and security. Perform regular backups and recovery operations.",
         "isBookmarked": false
     },
     {
@@ -52,7 +52,7 @@
             "init": 85000,
             "final": 110000
         },
-        "description": "Design and implement cloud infrastructure.",
+        "description": "Design and implement cloud infrastructure. Manage cloud resources and services. Ensure security and compliance of cloud environments.",
         "isBookmarked": true
     },
     {
@@ -66,7 +66,7 @@
             "init": 78000,
             "final": 98000
         },
-        "description": "Monitor and protect network security.",
+        "description": "Monitor and protect network security. Conduct vulnerability assessments and penetration testing. Develop and implement security policies and procedures.",
         "isBookmarked": false
     },
     {
@@ -80,7 +80,7 @@
             "init": 72000,
             "final": 92000
         },
-        "description": "Develop mobile applications for iOS and Android.",
+        "description": "Develop mobile applications for iOS and Android. Collaborate with cross-functional teams to define and design new features. Ensure the performance, quality, and responsiveness of applications.",
         "isBookmarked": true
     },
     {
@@ -94,7 +94,7 @@
             "init": 80000,
             "final": 105000
         },
-        "description": "Implement CI/CD pipelines and automate processes.",
+        "description": "Implement CI/CD pipelines and automate processes. Monitor and maintain infrastructure. Collaborate with development teams to improve deployment processes.",
         "isBookmarked": false
     },
     {
@@ -108,7 +108,7 @@
             "init": 68000,
             "final": 88000
         },
-        "description": "Design user interfaces and improve user experience.",
+        "description": "Design intuitive and visually appealing user interfaces for web and mobile applications. Conduct user research and create wireframes, prototypes, and mockups to improve user experience. Work closely with developers to implement designs.",
         "isBookmarked": true
     },
     {
@@ -122,7 +122,7 @@
             "init": 74000,
             "final": 94000
         },
-        "description": "Maintain and support IT infrastructure.",
+        "description": "Maintain and support IT infrastructure. Perform regular system updates and backups. Troubleshoot and resolve technical issues.",
         "isBookmarked": false
     },
     {
@@ -136,7 +136,7 @@
             "init": 76000,
             "final": 96000
         },
-        "description": "Design and manage network systems.",
+        "description": "Design and manage network systems. Ensure network security and performance. Troubleshoot and resolve network issues.",
         "isBookmarked": true
     }
 ]
