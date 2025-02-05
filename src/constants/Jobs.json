@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "logo": "https://placehold.co/400",
+        "title": "Frontend Developer",
+        "company": "Tech Solutions",
+        "location": "New York, NY",
+        "duration": "Full-time",
+        "salary": {
+            "init": 70000,
+            "final": 90000
+        },
+        "description": "Develop and maintain web applications using React.",
+        "isBookmarked": false
+    },
+    {
+        "id": 2,
+        "logo": "https://placehold.co/400",
+        "title": "Backend Developer",
+        "company": "Innovatech",
+        "location": "San Francisco, CA",
+        "duration": "Full-time",
+        "salary": {
+            "init": 80000,
+            "final": 100000
+        },
+        "description": "Build and maintain server-side logic using Node.js.",
+        "isBookmarked": true
+    },
+    {
+        "id": 3,
+        "logo": "https://placehold.co/400",
+        "title": "Database Administrator",
+        "company": "DataCorp",
+        "location": "Chicago, IL",
+        "duration": "Full-time",
+        "salary": {
+            "init": 75000,
+            "final": 95000
+        },
+        "description": "Manage and optimize database systems.",
+        "isBookmarked": false
+    },
+    {
+        "id": 4,
+        "logo": "https://placehold.co/400",
+        "title": "Cloud Engineer",
+        "company": "CloudNet",
+        "location": "Seattle, WA",
+        "duration": "Full-time",
+        "salary": {
+            "init": 85000,
+            "final": 110000
+        },
+        "description": "Design and implement cloud infrastructure.",
+        "isBookmarked": true
+    },
+    {
+        "id": 5,
+        "logo": "https://placehold.co/400",
+        "title": "Cybersecurity Analyst",
+        "company": "SecureTech",
+        "location": "Austin, TX",
+        "duration": "Full-time",
+        "salary": {
+            "init": 78000,
+            "final": 98000
+        },
+        "description": "Monitor and protect network security.",
+        "isBookmarked": false
+    },
+    {
+        "id": 6,
+        "logo": "https://placehold.co/400",
+        "title": "Mobile App Developer",
+        "company": "AppWorks",
+        "location": "Los Angeles, CA",
+        "duration": "Full-time",
+        "salary": {
+            "init": 72000,
+            "final": 92000
+        },
+        "description": "Develop mobile applications for iOS and Android.",
+        "isBookmarked": true
+    },
+    {
+        "id": 7,
+        "logo": "https://placehold.co/400",
+        "title": "DevOps Engineer",
+        "company": "DevOps Solutions",
+        "location": "Denver, CO",
+        "duration": "Full-time",
+        "salary": {
+            "init": 80000,
+            "final": 105000
+        },
+        "description": "Implement CI/CD pipelines and automate processes.",
+        "isBookmarked": false
+    },
+    {
+        "id": 8,
+        "logo": "https://placehold.co/400",
+        "title": "UI/UX Designer",
+        "company": "DesignHub",
+        "location": "Boston, MA",
+        "duration": "Full-time",
+        "salary": {
+            "init": 68000,
+            "final": 88000
+        },
+        "description": "Design user interfaces and improve user experience.",
+        "isBookmarked": true
+    },
+    {
+        "id": 9,
+        "logo": "https://placehold.co/400",
+        "title": "System Administrator",
+        "company": "SysAdmin Inc.",
+        "location": "Miami, FL",
+        "duration": "Full-time",
+        "salary": {
+            "init": 74000,
+            "final": 94000
+        },
+        "description": "Maintain and support IT infrastructure.",
+        "isBookmarked": false
+    },
+    {
+        "id": 10,
+        "logo": "https://placehold.co/400",
+        "title": "Network Engineer",
+        "company": "NetWorks",
+        "location": "Atlanta, GA",
+        "duration": "Full-time",
+        "salary": {
+            "init": 76000,
+            "final": 96000
+        },
+        "description": "Design and manage network systems.",
+        "isBookmarked": true
+    }
+]
