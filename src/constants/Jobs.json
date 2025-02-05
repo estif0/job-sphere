@@ -4,7 +4,7 @@
         "logo": "https://placehold.co/400",
         "title": "Frontend Developer",
         "company": "Tech Solutions",
-        "location": "New York, NY",
+        "location": "Onsite",
         "duration": "Full-time",
         "salary": {
             "init": 70000,
@@ -18,7 +18,7 @@
         "logo": "https://placehold.co/400",
         "title": "Backend Developer",
         "company": "Innovatech",
-        "location": "San Francisco, CA",
+        "location": "Remote",
         "duration": "Full-time",
         "salary": {
             "init": 80000,
@@ -32,7 +32,7 @@
         "logo": "https://placehold.co/400",
         "title": "Database Administrator",
         "company": "DataCorp",
-        "location": "Chicago, IL",
+        "location": "Onsite",
         "duration": "Full-time",
         "salary": {
             "init": 75000,
@@ -46,7 +46,7 @@
         "logo": "https://placehold.co/400",
         "title": "Cloud Engineer",
         "company": "CloudNet",
-        "location": "Seattle, WA",
+        "location": "Remote",
         "duration": "Full-time",
         "salary": {
             "init": 85000,
@@ -60,7 +60,7 @@
         "logo": "https://placehold.co/400",
         "title": "Cybersecurity Analyst",
         "company": "SecureTech",
-        "location": "Austin, TX",
+        "location": "Onsite",
         "duration": "Full-time",
         "salary": {
             "init": 78000,
@@ -74,7 +74,7 @@
         "logo": "https://placehold.co/400",
         "title": "Mobile App Developer",
         "company": "AppWorks",
-        "location": "Los Angeles, CA",
+        "location": "Remote",
         "duration": "Full-time",
         "salary": {
             "init": 72000,
@@ -88,7 +88,7 @@
         "logo": "https://placehold.co/400",
         "title": "DevOps Engineer",
         "company": "DevOps Solutions",
-        "location": "Denver, CO",
+        "location": "Onsite",
         "duration": "Full-time",
         "salary": {
             "init": 80000,
@@ -102,7 +102,7 @@
         "logo": "https://placehold.co/400",
         "title": "UI/UX Designer",
         "company": "DesignHub",
-        "location": "Boston, MA",
+        "location": "Remote",
         "duration": "Full-time",
         "salary": {
             "init": 68000,
@@ -116,7 +116,7 @@
         "logo": "https://placehold.co/400",
         "title": "System Administrator",
         "company": "SysAdmin Inc.",
-        "location": "Miami, FL",
+        "location": "Onsite",
         "duration": "Full-time",
         "salary": {
             "init": 74000,
@@ -130,7 +130,7 @@
         "logo": "https://placehold.co/400",
         "title": "Network Engineer",
         "company": "NetWorks",
-        "location": "Atlanta, GA",
+        "location": "Remote",
         "duration": "Full-time",
         "salary": {
             "init": 76000,
