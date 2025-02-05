@@ -30,8 +30,8 @@ export const Job: FC<JobProps> = ({ job }) => {
                         </div>
                     </div>
                     <div className="flex space-x-2">
-                        <Bookmark />
-                        <Share2 />
+                        <Bookmark strokeWidth={1.5} />
+                        <Share2 strokeWidth={1.5} />
                     </div>
                 </div>
                 <div>{job.description}</div>
