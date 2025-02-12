@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import companyLogo from "../assets/job-sphere-logo.png";
 
 export const Navbar = () => {
@@ -35,12 +36,18 @@ export const Navbar = () => {
                 </a>
             </div>
             <div className="nav-buttons flex justify-between items-center space-x-4">
-                <button className="bg-blue-800 text-white px-8 h-10 rounded-lg">
+                <Link
+                    to="/login"
+                    className="bg-blue-800 text-white px-8 pt-2 h-10 rounded-lg"
+                >
                     Login
-                </button>
-                <button className=" px-8 h-10 rounded-lg border-2 border-blue-800">
-                    Sign in
-                </button>
+                </Link>
+                <Link
+                    to="/sign-up"
+                    className="px-8 pt-2 h-10 rounded-lg border-2 border-blue-800"
+                >
+                    Sign Up
+                </Link>
             </div>
         </nav>
     );
