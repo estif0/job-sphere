@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import LoginSVG from "../assets/login.svg";
 import companyLogo from "../assets/job-sphere-logo.png";
 import { useFormik } from "formik";

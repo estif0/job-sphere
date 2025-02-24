@@ -1,36 +1,66 @@
 import SignupSVG from "../assets/signup.svg";
 import companyLogo from "../assets/job-sphere-logo.png";
+import { useFormik } from "formik";
+import { signupSchema } from "../schemas/schema";
 
 const Signup = () => {
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            password: "",
+        },
+        validationSchema: signupSchema, // Use the login schema for validation
+        onSubmit: (values) => {
+            console.log("Form data submitted:", values);
+            // Handle form submission (e.g., API call)
+        },
+    });
     return (
         <div className="w-full flex h-screen">
             <div className="flex justify-center items-center h-full w-full md:w-1/2 space-y-14">
-                <form className="flex flex-col space-y-10">
+                <form
+                    className="flex flex-col space-y-10"
+                    onSubmit={formik.handleSubmit}
+                >
                     <img
                         src={companyLogo}
                         alt="logo"
                         className="h-12 w-32 bg-blue-800 p-2 rounded-lg"
                     />
                     <h2>Login to your account</h2>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                        className="border-2 border-slate-500 rounded-lg p-2 px-4"
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Password"
-                        className="border-2 border-slate-500 rounded-lg p-2 px-4"
-                    />
+                    <div className="">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            className="border-2 border-slate-500 rounded-lg p-2 px-4"
+                        />
+                        {formik.touched.email && formik.errors.email ? (
+                            <div className="text-red-600">
+                                {formik.errors.email}
+                            </div>
+                        ) : null}
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Password"
+                            className="border-2 border-slate-500 rounded-lg p-2 px-4"
+                        />
+                        {formik.touched.password && formik.errors.password ? (
+                            <div className="text-red-600 m-0 p-0">
+                                {formik.errors.password}
+                            </div>
+                        ) : null}
+                    </div>
                     <button
                         type="submit"
                         className="bg-blue-800 text-white px-8 h-10 rounded-lg w-full"
                     >
-                        Login
+                        Signup
                     </button>
 
                     <div>
