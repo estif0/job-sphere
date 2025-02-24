@@ -12,30 +12,27 @@ import ProductPage from "./pages/ProductPage";
 function App() {
     return (
         <Router>
-            {/* Main Content Area */}
             <div className="container">
                 <Routes>
-                    {/* Default Route (Main App Content) */}
                     <Route
                         path="/"
                         element={
                             <>
                                 <Navbar />
                                 <SearchBar />
-                                <Filter />
-                                <Feed />
-                                <SavedJobs />
+                                <div className="flex flex-col space-y-10 md:flex-row  md:space-x-10 md:space-y-0">
+                                    <Filter />
+                                    <Feed />
+                                    <SavedJobs />
+                                </div>
                             </>
                         }
                     />
 
-                    {/* Login Route */}
                     <Route path="/login" element={<LoginPage />} />
 
-                    {/* Sign Up Route */}
                     <Route path="/sign-up" element={<SignUpPage />} />
 
-                    {/* Product Page */}
                     <Route
                         path="/product/:productId"
                         element={
