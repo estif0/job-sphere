@@ -2,7 +2,7 @@ import RangeSlider from "react-range-slider-input";
 
 export const Filter = () => {
     return (
-        <div className="flex flex-col p-2 my-5 w-full h-full bg-white rounded-lg text-gray-700 space-y-4 shadow-xl shadow-black/50 md:w-1/3">
+        <div className="flex flex-col p-2 my-5 w-full h-full bg-white rounded-lg  space-y-4 shadow-xl shadow-black/50 md:w-1/3">
             <h1 className="flex justify-center font-bold text-3xl">Filter</h1>
 
             <div className="flex flex-col gap-1">
