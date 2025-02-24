@@ -1,6 +1,21 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import LoginSVG from "../assets/login.svg";
 import companyLogo from "../assets/job-sphere-logo.png";
+import { useFormik } from "formik";
+import { loginSchema } from "../schemas/schema";
+
 const Login = () => {
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            password: "",
+        },
+        validationSchema: loginSchema, // Use the login schema for validation
+        onSubmit: (values) => {
+            console.log("Form data submitted:", values);
+            // Handle form submission (e.g., API call)
+        },
+    });
     return (
         <div className="w-full flex flex-col md:flex-row h-screen">
             <img
@@ -8,7 +23,10 @@ const Login = () => {
                 alt="A Login SVG photo of generic illustration"
                 className="hidden md:block h-full w-1/2 object-cover"
             />
-            <div className="flex justify-center items-center h-full w-full md:w-1/2 space-y-14">
+            <form
+                className="flex justify-center items-center h-full w-full md:w-1/2 space-y-14"
+                onSubmit={formik.handleSubmit}
+            >
                 <div className="flex flex-col space-y-10">
                     <img
                         src={companyLogo}
@@ -16,21 +34,45 @@ const Login = () => {
                         className="h-12 w-32 bg-blue-800 p-2 rounded-lg"
                     />
                     <h2>Login to your account</h2>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                        className="border-2 border-slate-500 rounded-lg p-2 px-4"
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Password"
-                        className="border-2 border-slate-500 rounded-lg p-2 px-4"
-                    />
-                    <button className="bg-blue-800 text-white px-8 h-10 rounded-lg w-full">
+                    <div className="">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            className="border-2 border-slate-500 rounded-lg p-2 px-4"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.email}
+                        />
+                        {formik.touched.email && formik.errors.email ? (
+                            <div className="text-red-600">
+                                {formik.errors.email}
+                            </div>
+                        ) : null}
+                    </div>
+
+                    <div className="">
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Password"
+                            className="border-2 border-slate-500 rounded-lg p-2 px-4"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value={formik.values.password}
+                        />
+                        {formik.touched.password && formik.errors.password ? (
+                            <div className="text-red-600 m-0 p-0">
+                                {formik.errors.password}
+                            </div>
+                        ) : null}
+                    </div>
+                    <button
+                        type="submit"
+                        className="bg-blue-800 text-white px-8 h-10 rounded-lg w-full"
+                    >
                         Login
                     </button>
 
@@ -174,7 +216,7 @@ const Login = () => {
                         </span>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     );
 };
