@@ -20,7 +20,7 @@ function App() {
                             <>
                                 <Navbar />
                                 <SearchBar />
-                                <div className="flex flex-col space-y-10 md:flex-row  md:space-x-10 md:space-y-0">
+                                <div className="flex flex-col space-y-10 md:flex-row  md:space-x-10 md:space-y-0 md:justify-around">
                                     <Filter />
                                     <Feed />
                                     <SavedJobs />

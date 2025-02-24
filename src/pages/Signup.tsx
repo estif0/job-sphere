@@ -3,7 +3,7 @@ import companyLogo from "../assets/job-sphere-logo.png";
 const Signup = () => {
     return (
         <div className="w-full flex h-screen">
-            <div className="flex justify-center items-center h-full w-1/2 space-y-14">
+            <div className="flex justify-center items-center h-full w-full md:w-1/2 space-y-14">
                 <div className="flex flex-col space-y-10">
                     <img
                         src={companyLogo}
@@ -173,7 +173,7 @@ const Signup = () => {
             <img
                 src={SignupSVG}
                 alt="A Login SVG photo of generic illustration"
-                className="h-full w-1/2 object-cover"
+                className="hidden md:block h-full w-1/2 object-cover"
             />
         </div>
     );

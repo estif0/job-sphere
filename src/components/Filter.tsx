@@ -2,13 +2,13 @@ import RangeSlider from "react-range-slider-input";
 
 export const Filter = () => {
     return (
-        <div className="flex flex-col p-2 my-5 mr-4 w-full h-full bg-white rounded-lg text-gray-700 space-y-4 shadow-xl shadow-black/50">
+        <div className="flex flex-col p-2 my-5 w-full h-full bg-white rounded-lg text-gray-700 space-y-4 shadow-xl shadow-black/50 md:w-1/3">
             <h1 className="flex justify-center font-bold text-3xl">Filter</h1>
 
             <div className="flex flex-col gap-1">
                 <p>Date Posted</p>
-                <div className="flex rounded-lg border-gray-400 border-2 h-[33px] ml-1">
-                    <select className="flex w-full ml-3 font-[300] cursor-pointer">
+                <div className="flex rounded-lg border-gray-400 border-2 h-12 m-1 outline-none focus:outline-none">
+                    <select className="flex w-full ml-3 cursor-pointer">
                         <option value="">All</option>
                         <option value="24">Last 24 Hours</option>
                         <option value="7">Last 7 Days</option>

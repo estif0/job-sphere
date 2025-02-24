@@ -2,13 +2,13 @@ import LoginSVG from "../assets/login.svg";
 import companyLogo from "../assets/job-sphere-logo.png";
 const Login = () => {
     return (
-        <div className="w-full flex h-screen">
+        <div className="w-full flex flex-col md:flex-row h-screen">
             <img
                 src={LoginSVG}
                 alt="A Login SVG photo of generic illustration"
-                className="h-full w-1/2 object-cover"
+                className="hidden md:block h-full w-1/2 object-cover"
             />
-            <div className="flex justify-center items-center h-full w-1/2 space-y-14">
+            <div className="flex justify-center items-center h-full w-full md:w-1/2 space-y-14">
                 <div className="flex flex-col space-y-10">
                     <img
                         src={companyLogo}
