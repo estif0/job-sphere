@@ -3,5 +3,22 @@
     "references": [
         { "path": "./tsconfig.app.json" },
         { "path": "./tsconfig.node.json" }
-    ]
+    ],
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "jsx": "react-jsx",
+        "strict": true,
+        "moduleResolution": "node",
+        "baseUrl": "./src",
+        "paths": {
+            "@components/*": ["components/*"],
+            "@features/*": ["features/*"],
+            "@pages/*": ["pages/*"],
+            "@services/*": ["services/*"],
+            "@store/*": ["store/*"],
+            "@styles/*": ["styles/*"],
+            "@hooks/*": ["hooks/*"]
+        }
+    }
 }
