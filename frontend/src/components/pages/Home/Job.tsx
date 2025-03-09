@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Job as JobType } from "../types/type";
+import { JobType } from "../../../types/type";
 import { Bookmark } from "lucide-react";
 import { Share2 } from "lucide-react";
 
@@ -9,8 +9,7 @@ interface JobProps {
 
 export const Job: FC<JobProps> = ({ job }) => {
     return (
-        // background of the job card
-        <div className="mb-6 flex space-x-3 p-4 bg-white shadow-lg rounded-lg border-1 border-gray-100">
+        <div className="w-full mb-6 flex space-x-3 p-4 bg-white shadow-lg rounded-lg border-1 border-gray-100">
             <img src={job.logo} alt="" className="h-10 mb-2" />
             <div className="flex flex-col space-y-2">
                 <div className="flex justify-between">
