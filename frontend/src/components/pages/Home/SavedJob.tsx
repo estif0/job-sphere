@@ -1,7 +1,7 @@
 import React from "react";
 import { X } from "lucide-react";
-import { SavedJobType } from "../../../types/type";
-const SavedJob: React.FC<{ job: SavedJobType }> = ({ job }) => {
+import { JobType } from "../../../types/type";
+const SavedJob: React.FC<{ job: JobType }> = ({ job }) => {
     return (
         <div
             className="p-4 flex flex-col bg-white shadow-lg rounded-lg border-1 border-gray-100"
