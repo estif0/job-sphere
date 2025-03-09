@@ -10,5 +10,7 @@ export interface JobType {
         final: number;
     };
     description: string;
+    experience: string;
     isBookmarked: boolean;
+    applicantNumber: number;
 }

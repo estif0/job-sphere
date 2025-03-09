@@ -19,6 +19,8 @@ const JobPage = () => {
             description:
                 "Develop and maintain web applications. Collaborate with cross-functional teams to define, design, and ship new features. Ensure the performance, quality, and responsiveness of applications. Identify and correct bottlenecks and fix bugs. Help maintain code quality, organization, and automation.",
             isBookmarked: false,
+            experience: "3Years",
+            applicantNumber: 40,
         },
         {
             id: 2,
@@ -34,6 +36,8 @@ const JobPage = () => {
             description:
                 "Oversee product development from ideation to launch. Work closely with engineering, design, and marketing teams to deliver high-quality products. Conduct market research and analyze industry trends. Define product vision, strategy, and roadmap. Prioritize features and manage the product backlog.",
             isBookmarked: false,
+            experience: "5Years",
+            applicantNumber: 30,
         },
         {
             id: 3,
@@ -49,6 +53,8 @@ const JobPage = () => {
             description:
                 "Analyze and interpret complex data sets. Develop and implement data models and algorithms. Work with stakeholders to identify opportunities for leveraging company data. Build predictive models and machine-learning algorithms. Present findings and insights to non-technical audiences.",
             isBookmarked: false,
+            experience: "4Years",
+            applicantNumber: 25,
         },
         {
             id: 4,
@@ -64,6 +70,8 @@ const JobPage = () => {
             description:
                 "Design and improve user interfaces for web and mobile applications. Conduct user research and usability testing. Collaborate with product managers and developers to create intuitive and user-friendly designs. Create wireframes, prototypes, and high-fidelity mockups.",
             isBookmarked: true,
+            experience: "3Years",
+            applicantNumber: 20,
         },
         {
             id: 5,
@@ -79,6 +87,8 @@ const JobPage = () => {
             description:
                 "Develop and execute marketing campaigns. Analyze market trends and customer behavior. Create content for social media, email, and other marketing channels. Collaborate with sales and product teams to align marketing strategies with business goals.",
             isBookmarked: false,
+            experience: "2Years",
+            applicantNumber: 35,
         },
         {
             id: 6,
@@ -94,6 +104,8 @@ const JobPage = () => {
             description:
                 "Implement and manage CI/CD pipelines. Automate infrastructure provisioning and deployment. Monitor and optimize system performance and reliability. Collaborate with development and operations teams to ensure smooth and efficient software delivery.",
             isBookmarked: true,
+            experience: "5Years",
+            applicantNumber: 15,
         },
         {
             id: 7,
@@ -109,6 +121,8 @@ const JobPage = () => {
             description:
                 "Manage recruitment and onboarding processes. Develop and implement HR policies and procedures. Oversee employee relations and performance management. Ensure compliance with labor laws and regulations. Foster a positive and inclusive workplace culture.",
             isBookmarked: false,
+            experience: "6Years",
+            applicantNumber: 50,
         },
         {
             id: 8,
@@ -124,6 +138,8 @@ const JobPage = () => {
             description:
                 "Identify and pursue new sales opportunities. Build and maintain relationships with clients. Develop and deliver sales presentations and proposals. Negotiate contracts and close deals. Meet and exceed sales targets and quotas.",
             isBookmarked: false,
+            experience: "3Years",
+            applicantNumber: 45,
         },
         {
             id: 9,
@@ -139,6 +155,8 @@ const JobPage = () => {
             description:
                 "Provide technical support and assistance to customers. Troubleshoot and resolve customer issues. Document and track customer interactions and resolutions. Collaborate with product and engineering teams to improve customer experience.",
             isBookmarked: false,
+            experience: "1Year",
+            applicantNumber: 60,
         },
         {
             id: 10,
@@ -154,6 +172,8 @@ const JobPage = () => {
             description:
                 "Analyze financial data and create reports. Develop financial models and forecasts. Monitor and evaluate financial performance. Provide insights and recommendations to management. Assist with budgeting and financial planning processes.",
             isBookmarked: true,
+            experience: "4Years",
+            applicantNumber: 55,
         },
     ];
     return (
