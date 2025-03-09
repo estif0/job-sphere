@@ -19,6 +19,7 @@
             "@store/*": ["store/*"],
             "@styles/*": ["styles/*"],
             "@hooks/*": ["hooks/*"]
-        }
+        },
+        "typeRoots": ["./node_modules/@types", "./src/types", "./types"]
     }
 }
