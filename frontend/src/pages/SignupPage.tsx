@@ -12,7 +12,13 @@ const SignupPage = () => {
                     action=""
                     className="flex flex-col items-center justify-center md:items-start space-y-6"
                 >
-                    <img src={logo} alt="job sphere logo" className="h-12" />
+                    <Link to="/">
+                        <img
+                            src={logo}
+                            alt="job sphere logo"
+                            className="h-12"
+                        />
+                    </Link>
                     <h1 className="font-bold text-3xl">Create your account</h1>
                     <div className="w-full flex flex-col space-y-2">
                         <div className="flex py-2 px-4 border-1 border-gray-300 rounded-xl space-x-2 w-full">

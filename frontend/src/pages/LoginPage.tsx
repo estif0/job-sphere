@@ -18,7 +18,13 @@ const LoginPage = () => {
                     action=""
                     className="flex flex-col items-center justify-center md:items-start space-y-8"
                 >
-                    <img src={logo} alt="job sphere logo" className="h-12" />
+                    <Link to="/">
+                        <img
+                            src={logo}
+                            alt="job sphere logo"
+                            className="h-12"
+                        />
+                    </Link>
                     <h1 className="font-bold text-3xl">
                         Log in to your account
                     </h1>
