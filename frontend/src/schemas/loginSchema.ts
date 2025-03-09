@@ -15,7 +15,7 @@ export const loginSchema = Yup.object().shape({
         .max(72, "Password cannot exceed 72 characters")
         .matches(
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-            "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
+            `Password must contain at least: one uppercase letter, one lowercase letter, one number, and one special character`
         )
         .required("Password is required"),
 });
