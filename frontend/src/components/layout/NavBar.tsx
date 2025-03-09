@@ -2,7 +2,7 @@ import Logo from "../../assets/icons/Logo.svg";
 
 const NavBar = () => {
     return (
-        <nav className="w-full px-3 md:px-36 py-3 flex flex-wrap justify-between items-center shadow-lg shadow-gray-300">
+        <nav className="w-full px-3 md:px-36 py-3 flex flex-wrap justify-between items-center shadow shadow-gray-300">
             <img src={Logo} className="h-12" alt="Logo" />
             <div className="nav-lists hidden md:flex justify-between items-center space-x-10 md:space-x-6">
                 <a
