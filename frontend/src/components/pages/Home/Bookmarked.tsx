@@ -7,7 +7,7 @@ interface BookmarkedProps {
 
 const Bookmarked: React.FC<BookmarkedProps> = ({ jobList }) => {
     return (
-        <div className="max-w-3xs">
+        <div className="w-full border-1 border-gray-300 shadow-xl rounded-lg px-4 py-2">
             <h2 className="text-center text-lg">Saved Jobs</h2>
             <div className="flex flex-col space-y-2">
                 {jobList

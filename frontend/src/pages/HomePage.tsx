@@ -1,6 +1,7 @@
 import NavBar from "../components/layout/NavBar";
 import Bookmarked from "../components/pages/Home/Bookmarked";
 import { Feed } from "../components/pages/Home/Feed";
+import Filter from "../components/pages/Home/Filter";
 import SearchBar from "../components/pages/Home/SearchBar";
 import { JobType } from "../types/type";
 
@@ -163,10 +164,7 @@ const HomePage = () => {
             <SearchBar />
             <div className="my-4 mx-18 grid grid-cols-1 lg:grid-cols-13 gap-x-10">
                 <div className="col-span-4">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Molestias reprehenderit quam at quidem natus et, error nulla
-                    ad officiis dolorem? Perspiciatis ratione sapiente soluta.
-                    Voluptas corrupti accusamus doloremque illo ex.
+                    <Filter />
                 </div>
                 <div className="col-span-6">
                     <Feed jobList={jobList} />
