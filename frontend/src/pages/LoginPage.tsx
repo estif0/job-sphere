@@ -52,7 +52,7 @@ const LoginPage = () => {
                             Don't have an account?
                         </span>{" "}
                         <Link
-                            to={"signup"}
+                            to="/signup"
                             className="text-blue-800 hover:cursor-pointer"
                         >
                             Create account
