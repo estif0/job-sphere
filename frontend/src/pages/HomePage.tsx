@@ -2,7 +2,7 @@ import NavBar from "../components/layout/NavBar";
 import Bookmarked from "../components/pages/Home/Bookmarked";
 import { Feed } from "../components/pages/Home/Feed";
 import Filter from "../components/pages/Home/Filter";
-import SearchBar from "../components/pages/Home/SearchBar";
+import SearchBar from "../components/common/SearchBar";
 import { JobType } from "../types/type";
 
 const HomePage = () => {
