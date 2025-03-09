@@ -2,7 +2,7 @@ import NavBar from "../components/layout/NavBar";
 import RelatedJobs from "../components/pages/JobDetails/RelatedJobs";
 import { JobType } from "../types/type";
 import { Search } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const JobPage = () => {
     const jobList: JobType[] = [
         {
@@ -163,7 +163,9 @@ const JobPage = () => {
                 <div className="col-span-1"></div>
                 <div className="col-span-6">
                     <div className="flex justify-between items-center">
-                        <div>&lt; Back</div>
+                        <Link to="/" className="text-blue-500">
+                            &lt; Back
+                        </Link>
                         <div className="flex w-1/2 justify-end">
                             <form className="my-4 w-full mx-auto rounded-full h-10 relative ">
                                 <input
