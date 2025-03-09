@@ -70,7 +70,7 @@ const SignupPage = () => {
                             Already have an account?
                         </span>{" "}
                         <Link
-                            to="/signup"
+                            to="/login"
                             className="text-blue-800 hover:cursor-pointer"
                         >
                             Login
