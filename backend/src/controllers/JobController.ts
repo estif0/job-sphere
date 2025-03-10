@@ -122,3 +122,28 @@ export const updateJobById = async (
         });
     }
 };
+
+export const deleteJobById = async (
+    req: Request,
+    res: Response
+): Promise<void> => {
+    try {
+        const id = req.params.id;
+        const job = await Job.findByIdAndDelete(id);
+        if (!job) {
+            res.status(404).json({
+                error: "Job doesn't exist!",
+            });
+            return;
+        }
+        res.status(200).json({
+            message: "Job has been deleted!",
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            error: "An error occurred while deleting the job.",
+            details: error,
+        });
+    }
+};
