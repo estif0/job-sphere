@@ -30,11 +30,24 @@ export const createJob = async (req: Request, res: Response): Promise<void> => {
             job: job,
             message: "Job has been created!",
         });
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        console.error(error);
         res.status(500).json({
             error: "An error occurred while creating the job.",
-            details: err,
+            details: error,
+        });
+    }
+};
+
+export const getJobs = async (_req: Request, res: Response): Promise<void> => {
+    try {
+        const jobs = await Job.find();
+        res.status(200).json(jobs);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            error: "An error occurred while fetching jobs.",
+            details: error,
         });
     }
 };
