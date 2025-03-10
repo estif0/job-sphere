@@ -11,7 +11,6 @@ export const createJob = async (req: Request, res: Response): Promise<void> => {
             salary,
             description,
             experience,
-            isBookmarked,
         } = req.body;
 
         const job = Job.create({
@@ -23,7 +22,7 @@ export const createJob = async (req: Request, res: Response): Promise<void> => {
             salary,
             description,
             experience,
-            isBookmarked,
+            isBookmarked: false,
             applicantNumber: 0,
         });
         res.status(201).json({
