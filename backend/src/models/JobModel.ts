@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
 const jobSchema = new mongoose.Schema({
-    id: { type: Number, required: true },
     logo: { type: String, required: true },
     title: { type: String, required: true },
     company: { type: String, required: true },
@@ -17,4 +16,4 @@ const jobSchema = new mongoose.Schema({
     applicantNumber: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("Job", jobSchema);
+export default mongoose.model("Job", jobSchema);
