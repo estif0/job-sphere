@@ -51,3 +51,26 @@ export const getJobs = async (_req: Request, res: Response): Promise<void> => {
         });
     }
 };
+
+export const getJobById = async (
+    req: Request,
+    res: Response
+): Promise<void> => {
+    try {
+        const id = req.params.id;
+        const job = await Job.findById(id);
+        if (!job) {
+            res.status(404).json({
+                error: "Job doesn't exist!",
+            });
+            return;
+        }
+        res.status(200).json(job);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            error: "An error occurred while fetching the job.",
+            details: error,
+        });
+    }
+};
