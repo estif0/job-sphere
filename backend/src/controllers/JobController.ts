@@ -68,7 +68,56 @@ export const getJobById = async (
     } catch (error) {
         console.log(error);
         res.status(500).json({
-            error: "An error occurred while fetching the job.",
+            error: "An error occurred while fetching the job!",
+            details: error,
+        });
+    }
+};
+
+export const updateJobById = async (
+    req: Request,
+    res: Response
+): Promise<void> => {
+    try {
+        const id = req.params.id;
+        const {
+            logo,
+            title,
+            company,
+            location,
+            duration,
+            salary,
+            description,
+            experience,
+        } = req.body;
+        const job = await Job.findByIdAndUpdate(
+            id,
+            {
+                logo,
+                title,
+                company,
+                location,
+                duration,
+                salary,
+                description,
+                experience,
+            },
+            { new: true }
+        );
+        if (!job) {
+            res.status(404).json({
+                error: "Job doesn't exist!",
+            });
+            return;
+        }
+        res.status(200).json({
+            job: job,
+            message: "Job has been updated!",
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            error: "An error occurred while updating the job.",
             details: error,
         });
     }
