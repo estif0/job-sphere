@@ -3,7 +3,7 @@ import RelatedJobs from "../components/pages/JobDetails/RelatedJobs";
 import { JobType } from "../types/type";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
-const JobPage = () => {
+const JobDetailsPage = () => {
     const jobList: JobType[] = [
         {
             id: 1,
@@ -217,4 +217,4 @@ const JobPage = () => {
     );
 };
 
-export default JobPage;
+export default JobDetailsPage;
