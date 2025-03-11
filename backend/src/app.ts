@@ -5,12 +5,14 @@ import connectToDB from "./config/db";
 import logger from "./middleware/logger";
 import limiter from "./middleware/rateLimit";
 import errorHandler from "./middleware/errorHandler";
+import cors from "cors";
 
 dotenv.config();
 connectToDB();
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(logger);
 app.use(limiter);
