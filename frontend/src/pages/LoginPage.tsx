@@ -13,8 +13,22 @@ const LoginPage = () => {
         },
         validationSchema: loginSchema,
         onSubmit: (values) => {
-            console.log("Form data submitted:", values);
-            // Handle form submission (e.g., API call)
+            console.log(values);
+            fetch("http://localhost:8080api/users/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log("Success:", data);
+                    <Link to="/dashboard" />;
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
         },
     });
 
