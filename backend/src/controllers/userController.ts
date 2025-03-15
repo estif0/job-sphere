@@ -47,7 +47,37 @@ export const register = asyncHandler(
     }
 );
 export const login = asyncHandler(
-    async (_req: Request, res: Response): Promise<void> => {
-        res.json({ message: "login" });
+    async (req: Request, res: Response): Promise<void> => {
+        try {
+            const { email, password } = req.body;
+
+            const user = await User.findOne({ email });
+
+            if (!user) {
+                res.status(400);
+                throw new Error("Invalid email or password");
+            }
+
+            const isPasswordMatch = await bcrypt.compare(
+                password,
+                user.password
+            );
+
+            if (!isPasswordMatch) {
+                res.status(400);
+                throw new Error("Invalid email or password");
+            }
+
+            res.status(200).json({
+                user: user,
+                message: "User logged in successfully!",
+            });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({
+                error: "An error occurred while logging in the user.",
+                details: error,
+            });
+        }
     }
 );
