@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import User from "../models/UserModel";
 import bcrypt from "bcrypt";
 import asyncHandler from "express-async-handler";
+import jwt from "jsonwebtoken";
 
 export const register = asyncHandler(
     async (req: Request, res: Response): Promise<void> => {
@@ -29,7 +30,10 @@ export const register = asyncHandler(
 
             if (user) {
                 res.status(201).json({
-                    user: user,
+                    id: user._id,
+                    name: user.firstName,
+                    email: user.email,
+                    token: generateToken(user._id.toString()),
                     message: "User has been created!",
                 });
             } else {
@@ -69,7 +73,10 @@ export const login = asyncHandler(
             }
 
             res.status(200).json({
-                user: user,
+                id: user._id,
+                name: user.firstName,
+                email: user.email,
+                token: generateToken(user._id.toString()),
                 message: "User logged in successfully!",
             });
         } catch (error) {
@@ -81,3 +88,24 @@ export const login = asyncHandler(
         }
     }
 );
+
+export const getMe = asyncHandler(
+    async (_req: Request, res: Response): Promise<void> => {
+        try {
+        } catch (error) {
+            res.status(500).json({
+                details: error,
+            });
+        }
+    }
+);
+
+const generateToken = (id: string) => {
+    const secret = process.env.JWT_SECRET;
+    if (!secret) {
+        throw new Error("JWT_SECRET is not defined");
+    }
+    return jwt.sign({ id }, secret, {
+        expiresIn: "15d",
+    });
+};
