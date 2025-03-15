@@ -89,9 +89,33 @@ export const login = asyncHandler(
     }
 );
 
+interface AuthenticatedRequest extends Request {
+    user?: {
+        id: string;
+    };
+}
+
 export const getMe = asyncHandler(
-    async (_req: Request, res: Response): Promise<void> => {
+    async (req: AuthenticatedRequest, res: Response): Promise<void> => {
         try {
+            if (!req.user) {
+                res.status(401);
+                throw new Error("Not authorized, no user found");
+            }
+            const user = await User.findById(req.user.id);
+
+            if (!user) {
+                res.status(404);
+                throw new Error("User not found");
+            }
+
+            const { firstName, email, _id } = user;
+
+            res.status(200).json({
+                name: firstName,
+                id: _id,
+                email: email,
+            });
         } catch (error) {
             res.status(500).json({
                 details: error,
