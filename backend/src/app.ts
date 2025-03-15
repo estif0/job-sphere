@@ -6,6 +6,7 @@ import logger from "./middleware/logger";
 import limiter from "./middleware/rateLimit";
 import errorHandler from "./middleware/errorHandler";
 import cors from "cors";
+import userRouter from "./routes/UsersRoute";
 
 dotenv.config();
 connectToDB();
@@ -19,5 +20,6 @@ app.use(limiter);
 app.use(errorHandler);
 
 app.use("/api/jobs", jobRouter);
+app.use("api/users", userRouter);
 
 export default app;
