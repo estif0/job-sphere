@@ -1,10 +1,9 @@
 import { Router } from "express";
-
+import { register, login } from "../controllers/userController";
 const userRouter = Router();
 
-userRouter.post("/login");
-
-userRouter.post("/register");
+userRouter.post("/signup", register);
+userRouter.post("/login", login);
 
 userRouter.get("/protected");
 userRouter.get("/protected-admin");
