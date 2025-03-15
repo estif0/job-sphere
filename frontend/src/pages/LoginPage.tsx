@@ -12,23 +12,30 @@ const LoginPage = () => {
             password: "",
         },
         validationSchema: loginSchema,
-        onSubmit: (values) => {
-            console.log(values);
-            fetch("http://localhost:8080api/users/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(values),
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log("Success:", data);
-                    <Link to="/dashboard" />;
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
+        onSubmit: async (values) => {
+            try {
+                const response = await fetch(
+                    "http://localhost:8080/api/users/login",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(values),
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error("Invalid email or password");
+                }
+
+                const data = await response.json();
+
+                localStorage.setItem("token", data.token);
+                window.location.href = "/dashboard";
+            } catch (error) {
+                console.error("Login failed:", error);
+            }
         },
     });
 

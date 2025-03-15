@@ -19,7 +19,7 @@ const SignupPage = () => {
         onSubmit: (values) => {
             console.log(values);
 
-            fetch("http://localhost:8080api/users/register", {
+            fetch("http://localhost:8080/api/users/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -156,7 +156,10 @@ const SignupPage = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <button className="w-full bg-blue-700 text-white px-8 md:px-10 h-10 rounded-lg flex items-center justify-center">
+                    <button
+                        className="w-full bg-blue-700 text-white px-8 md:px-10 h-10 rounded-lg flex items-center justify-center"
+                        type="submit"
+                    >
                         Create Account
                     </button>
 

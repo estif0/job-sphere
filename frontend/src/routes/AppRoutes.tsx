@@ -9,7 +9,7 @@ import Dashboard from "../pages/Dashboard";
 
 const AppRoutes: React.FC = () => {
     const { data: jobList } = useGetAllJobsQuery({});
-    console.log(jobList);
+
     return (
         <Router>
             <Routes>
