@@ -89,6 +89,8 @@ export const updateJobById = async (
             salary,
             description,
             experience,
+            isBookmarked,
+            applicantNumber,
         } = req.body;
         const job = await Job.findByIdAndUpdate(
             id,
@@ -101,6 +103,8 @@ export const updateJobById = async (
                 salary,
                 description,
                 experience,
+                isBookmarked,
+                applicantNumber,
             },
             { new: true }
         );

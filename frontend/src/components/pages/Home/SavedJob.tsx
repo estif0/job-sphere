@@ -5,7 +5,7 @@ const SavedJob: React.FC<{ job: JobType }> = ({ job }) => {
     return (
         <div
             className="p-4 flex flex-col bg-white shadow-lg rounded-lg border-1 border-gray-100"
-            key={job.id}
+            key={job._id}
         >
             <div className="flex justify-between">
                 <h3 className="font-bold">{job.title}</h3>

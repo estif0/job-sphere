@@ -6,16 +6,17 @@ interface BookmarkedProps {
 }
 
 const Bookmarked: React.FC<BookmarkedProps> = ({ jobList }) => {
+    const bookmarkedJobs = jobList.filter((job) => job.isBookmarked);
+
     return (
         <div className="w-full border-1 border-gray-300 shadow-xl rounded-lg px-4 py-2">
-            <h2 className="text-center text-lg">Saved Jobs</h2>
-            <div className="flex flex-col space-y-2">
-                {jobList
-                    .filter((job) => job.isBookmarked)
-                    .map((job) => (
+            <h2 className="text-center text-lg mb-4">Saved Jobs</h2>
+            {bookmarkedJobs.length > 0 ? (
+                <div className="flex flex-col space-y-2">
+                    {bookmarkedJobs.map((job) => (
                         <div
                             className="p-4 flex flex-col bg-white shadow-lg rounded-lg border-1 border-gray-100"
-                            key={job.id}
+                            key={job._id}
                         >
                             <div className="flex justify-between">
                                 <h3 className="font-bold">{job.title}</h3>
@@ -30,12 +31,16 @@ const Bookmarked: React.FC<BookmarkedProps> = ({ jobList }) => {
                                 </p>
 
                                 <p className="bg-gray-200 p-0.5 px-2 rounded-lg text-xs">
-                                    ${job.salary.init} - ${job.salary.final}
+                                    <span>${job.salary.init}</span> -{" "}
+                                    <span>${job.salary.final}</span>
                                 </p>
                             </div>
                         </div>
                     ))}
-            </div>
+                </div>
+            ) : (
+                <p className="text-center text-gray-500">No bookmarked jobs</p>
+            )}
         </div>
     );
 };

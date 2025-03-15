@@ -1,8 +1,6 @@
 import { FC } from "react";
 import { JobType } from "../../../types/type";
-import { Bookmark } from "lucide-react";
-import { Share2 } from "lucide-react";
-
+import { Bookmark, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface JobProps {
@@ -16,7 +14,7 @@ export const Job: FC<JobProps> = ({ job }) => {
             <div className="flex flex-col space-y-2">
                 <div className="flex justify-between">
                     <div className="mb-2">
-                        <Link to={`/job/${job.id}`}>
+                        <Link to={`/job/${job._id}`}>
                             <h2 className="font-bold text-2xl mb-2">
                                 {job.title}
                             </h2>

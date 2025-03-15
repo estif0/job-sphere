@@ -13,7 +13,7 @@ const jobRouter = express.Router();
 jobRouter.get("/", getJobs);
 jobRouter.get("/:id", getJobById);
 jobRouter.post("/new", validateJob, handleValidationErrors, createJob);
-jobRouter.put(
+jobRouter.patch(
     "/update/:id",
     validateJob,
     handleValidationErrors,

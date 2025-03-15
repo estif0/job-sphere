@@ -33,7 +33,7 @@ export const Feed: React.FC<FeedProps> = ({ jobList }) => {
     return (
         <div className="w-full mx-auto">
             {currentJobs.map((job) => (
-                <Job key={job.id} job={job} />
+                <Job key={job._id} job={job} />
             ))}
             <div className="flex justify-between mt-4">
                 <button

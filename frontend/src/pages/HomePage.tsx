@@ -16,7 +16,7 @@ const HomePage = () => {
         <>
             <NavBar />
             <SearchBar />
-            <div className="my-4 mx-18 grid grid-cols-1 lg:grid-cols-13 gap-x-10">
+            <div className="my-4 mx-12 grid grid-cols-1 lg:grid-cols-13 gap-x-10">
                 <div className="col-span-4">
                     <Filter />
                 </div>

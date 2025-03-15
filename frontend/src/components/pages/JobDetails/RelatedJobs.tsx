@@ -12,11 +12,12 @@ const RelatedJobs: React.FC<RelatedJobsType> = ({ jobList }) => {
             <h2 className="text-center text-lg">Related Jobs</h2>
             <div className="flex flex-col space-y-2">
                 {jobList
-                    .filter((job) => job.isBookmarked)
+                    .filter((job) => !job.isBookmarked)
+                    .slice(0, 4)
                     .map((job) => (
                         <div
                             className="p-4 flex flex-col bg-white shadow-lg rounded-lg border-1 border-gray-100"
-                            key={job.id}
+                            key={job._id}
                         >
                             <div className="flex justify-between">
                                 <h3 className="font-bold">{job.title}</h3>
