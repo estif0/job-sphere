@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-
+import { fetchWithAuth } from "../services/fetchWithAuth";
 import {
     Briefcase,
     MapPin,
@@ -28,7 +28,7 @@ const PostJobPage = () => {
         onSubmit: async (values) => {
             try {
                 console.log("Posting job:", values);
-                const response = await fetch(
+                const response = await fetchWithAuth(
                     "http://localhost:8080/api/jobs/new",
                     {
                         method: "POST",
