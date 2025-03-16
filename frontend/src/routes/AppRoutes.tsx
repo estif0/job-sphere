@@ -6,6 +6,7 @@ import JobDetailsPage from "../pages/JobDetailsPage";
 import PageNotFound from "../pages/PageNotFound";
 import { useGetAllJobsQuery } from "../app/features/jobApiSlice";
 import Dashboard from "../pages/Dashboard";
+import PostJobPage from "../pages/PostJobPage";
 
 const AppRoutes: React.FC = () => {
     const { data: jobList } = useGetAllJobsQuery({});
@@ -21,6 +22,7 @@ const AppRoutes: React.FC = () => {
                     path="/job/:id"
                     element={<JobDetailsPage jobList={jobList} />}
                 />
+                <Route path="/post-job" element={<PostJobPage />} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Router>

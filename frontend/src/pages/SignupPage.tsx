@@ -16,23 +16,30 @@ const SignupPage = () => {
             confirmPassword: "",
         },
         validationSchema: signupSchema,
-        onSubmit: (values) => {
-            console.log(values);
+        onSubmit: async (values) => {
+            try {
+                const response = await fetch(
+                    "http://localhost:8080/api/users/signup",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(values),
+                    }
+                );
 
-            fetch("http://localhost:8080/api/users/signup", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(values),
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    console.log("Success:", data);
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                });
+                if (!response.ok) {
+                    throw new Error("Signup failed");
+                }
+
+                const data = await response.json();
+
+                localStorage.setItem("token", data.token);
+                window.location.href = "/dashboard";
+            } catch (error) {
+                console.error("Signup failed:", error);
+            }
         },
     });
 

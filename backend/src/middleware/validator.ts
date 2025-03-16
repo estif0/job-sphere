@@ -22,14 +22,14 @@ export const validateJob = [
         .isString()
         .notEmpty()
         .withMessage("Duration is required and must be a string"),
-    body("salary.init")
+    body("salaryMin")
         .isNumeric()
         .notEmpty()
-        .withMessage("Initial salary is required and must be a number"),
-    body("salary.final")
+        .withMessage("Minimum salary is required and must be a number"),
+    body("salaryMax")
         .isNumeric()
         .notEmpty()
-        .withMessage("Final salary is required and must be a number"),
+        .withMessage("Maximum salary is required and must be a number"),
     body("description")
         .isString()
         .notEmpty()

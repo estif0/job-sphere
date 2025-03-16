@@ -8,7 +8,8 @@ export const createJob = async (req: Request, res: Response): Promise<void> => {
             company,
             location,
             duration,
-            salary,
+            salaryMin,
+            salaryMax,
             description,
             experience,
         } = req.body;
@@ -19,7 +20,10 @@ export const createJob = async (req: Request, res: Response): Promise<void> => {
             company,
             location,
             duration,
-            salary,
+            salary: {
+                init: salaryMin,
+                final: salaryMax,
+            },
             description,
             experience,
             isBookmarked: false,
